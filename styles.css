@@ -18,10 +18,10 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    background: #388e3c;
+    background: linear-gradient(to right, #3752c5, #81c784);
     padding: 1rem;
     color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(62, 111, 189, 0.2);
     height: 29px;
   }
   nav a {
@@ -44,13 +44,13 @@ body {
     background-size: cover; /* Explicitly define the background size */
     color: #fff;
     box-shadow: inset 0 0 10px #00000080;
-    height: 520px;
+    height: 578px;
 }
 
 
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 1.6rem;
   }
   .hero p {
@@ -67,6 +67,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     margin: 0.5rem;
+    margin-top: 1.6rem;
     transition: transform 0.3s, background-color 0.3s;
   }
   .hero button:hover {
@@ -131,4 +132,61 @@ body {
     .hero button {
       font-size: 0.9rem;
     }
+  }
+
+  .live-score, .previous-matches {
+    margin: 1.5rem auto;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .live-score h2, .previous-matches h2 {
+    font-size: 1.8rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+  }
+  
+  .match-card {
+    padding: 1rem;
+    background: linear-gradient(to right, #3752c5, #81c784);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 1rem;
+    /* display: flex;
+    position: absolute; */
+  }
+  
+  .match-card p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .club-img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 25px ;
+    margin-left: 25px;
+  }
+
+  .right{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex; 
+     align-items:center;
+    position: absolute;
+    margin-top: -87px ;
+    float: right;
+    /* margin-left: 441px;
+     */
+     justify-content: flex-end;
   }
