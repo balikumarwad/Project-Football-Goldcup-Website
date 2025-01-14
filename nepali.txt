@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Bagmati Goldcup Website</title>
+</head>
+<body>
+  <navbar>
+    <ul class="nav">
+      <li><a href="">Home</a></li>
+      <li><a href="">News</a></li>
+      <li><a href="">Tournaments</a></li>
+      <li><a href="">Clubs</a></li>
+      <li><a href="">Photo Gallery</a></li>
+      <li><a href="">Teams</a></li>
+    </ul>
+  </navbar>
+  <header>
+    <!-- <img class="logo" src="logo.png" alt="Bagmati Goldcup Logo"> -->
+    <div class="title">
+      <h1>Bagmati Goldcup</h1>
+      <p>Bagmati Goldcup is a football tournament held in Bagmati Muncipality, Nepal.</p>
+    </div>
+</body>
+</html>
