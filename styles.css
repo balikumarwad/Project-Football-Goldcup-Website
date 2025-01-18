@@ -39,7 +39,7 @@ body {
   .hero {
     text-align: center;
     padding: 1.6rem;
-    background: url('./Assets/images/herobg.png') no-repeat center center;
+    background: url('./Assets/images/stadium.jpg') no-repeat center center;
     background-size: cover;
     background-size: cover; /* Explicitly define the background size */
     color: #fff;
@@ -50,12 +50,14 @@ body {
 
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.95rem;
     margin-bottom: 1.6rem;
+    color: blue;
   }
   .hero p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    color: blue;
   }
   .hero button {
     padding: 0.57rem 1.47rem;
