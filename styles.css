@@ -17,7 +17,7 @@ body {
     font-size: 1.3rem;
     font-weight: bold;
   }
-  nav {
+  /* nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -44,6 +44,98 @@ body {
   nav a:hover {
     background: #66bb6a;
   }
+ */
+.design:hover{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #3752c5, #81c784);
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(62, 111, 189, 0.2);
+  height: 239px;
+}
+
+
+ .dropdown {
+  display: none; /* Initially hide the dropdown */
+}
+
+.dropdown-container:hover .dropdown {
+  display: block; /* Show the dropdown when hovering over the container */
+  background: none;
+}
+
+.search-box{
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.search-box:focus {
+  border-color: #4CAF50; /* Green color for the border */
+  outline: none; /* Removes the default focus outline */
+}
+ .hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 166, 0);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  z-index: 999;
+}
+
+.navbar.open {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.fa-times {
+  display: none;
+}
+
+.hamburger.open .fa-bars {
+  display: none;
+}
+
+.hamburger.open .fa-times {
+  display: block;
+}
   .hero {
     text-align: center;
     padding: 1.6rem;

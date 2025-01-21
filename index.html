@@ -3,27 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
   <title>७ औं बाग्मती गोल्ड कप 2081</title>
 
 </head>
 <body>
   <nav>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <form class="form-inline" action="/action_page.php">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-success" type="submit">Search</button>
-      </form>
+    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
     </nav>
     
-    <div class="logo"><img class="logo-img" src="logo.jpg"></div>
-    <a href="#">गृहपृष्ठ</a>
-    <a href="#">प्रत्यक्ष स्कोर</a>
-    <a href="#">टिमहरू</a>
-    <a href="#">तालिका</a>
-    <a href="#">खेलकुद क्लब</a>
-    <a href="news.html">सम्पर्क</a>
+
+  </nav> -->
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <form class="search" action="/action_page.php">
+      <input class="search-box" type="text" placeholder="Search">
+      <i style="color:bisque" class="fa-solid fa-magnifying-glass"></i>
+    </form>
+    <!-- <div class="logo"><img class="logo-img" src="logo.jpg"></div> -->
+    <a href="#" class="home">गृहपृष्ठ
+  </a>
+<div class="dropdown-container design">
+  <a href="#" class="score">प्रत्यक्ष स्कोर</a>
+  <select class="dropdown design">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <!-- Add more options as needed -->
+  </select>
+</div>
+<div class="dropdown-container design">
+  <a href="#">टिमहरू</a>
+  <select class="dropdown ">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <!-- Add more options as needed -->
+  </select>
+</div>
+
+<div class="dropdown-container design">  
+  <a href="#">तालिका</a>
+  <select class="dropdown">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <!-- Add more options as needed -->
+  </select>
+</div>
+
+<div class="dropdown-container design">
+  <a href="#">खेलकुद क्लब</a>
+  <select class="dropdown">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <!-- Add more options as needed -->
+  </select>
+</div>
+<div class="dropdown-container design">
+  <a href="news.html">सम्पर्क</a>
+  <select class="dropdown">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <!-- Add more options as needed -->
+  </select>
+</div>
   </nav>
+
+
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    const icon = hamburger.querySelector('i');
+    navbar.classList.toggle('open');
+
+    // Toggle between bars and times icons
+    if (navbar.classList.contains('open')) {
+      icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+      icon.classList.replace('fa-times', 'fa-bars');
+    }
+  });
+
+  // Close the navbar when clicking a link
+  // document.querySelectorAll('.navbar a').forEach(link => {
+  //   link.addEventListener('click', () => {
+  //     navbar.classList.remove('open');
+  //     const icon = hamburger.querySelector('i');
+  //     icon.classList.replace('fa-times', 'fa-bars');
+  //   });
+  // });
+</script>
+
+
+
   <div class="hero">
     <h1>सातौं बागमती राष्ट्रिय फुटबल  प्रतियोगिता-२०८१    </h1>
     <p>प्रत्यक्ष अपडेट र जानकारी यहीँ पाउनुहोस्!</p>
