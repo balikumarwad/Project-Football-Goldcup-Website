@@ -6,6 +6,7 @@ body {
     background-color: #f8f9fa;
     color: #333;
     box-sizing: border-box;
+    background-color: #333;
   }
 
   header {
@@ -322,9 +323,8 @@ border: 3px solid darkgray;
   align-items: center;
   flex-direction: column;
   background-color: none;
-  width: 90vw;
-  height: 30vh;
-
+  width: 82vw;
+  height: 37vh;
   /* padding: 1.2em; */
 }
 .vidbg-color{
@@ -332,7 +332,7 @@ border: 3px solid darkgray;
   display: flex;
   flex-direction: column;
   width: 90vw;
-  height: 30vh;
+  height: 37vh;
   /* background: aquamarine; */
 }
 
@@ -368,6 +368,11 @@ border: 3px solid darkgray;
   display: flex;
 }
 
+.small-video{
+  width: 140px;
+    height: 73px;
+    margin-left: 12px;
+}
 /* 
 @media  screen and (max-width:360px) {
   
