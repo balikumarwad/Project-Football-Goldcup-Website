@@ -239,3 +239,72 @@ body {
   /* transform: scale(1.1); */
  }
 
+
+ .col{
+  min-width: 250px;
+  color: #d6d2d2;
+  font-family: poppins;
+  padding: 0 2rem;
+  margin-top: 10px;
+
+
+}
+.col p{
+  font-size: small;
+}
+
+ .copyright{
+  display: flex;
+  margin-top: 0px;
+  /* padding-left: 600px; */
+  /* color:black; */
+  /* background-color: rgb(233, 233, 239); */
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+}
+
+
+.row{
+  display: flex;
+  justify-content: space-around;
+  
+  
+  
+}
+
+.contactus{
+  display: flex;
+  justify-content: flex-start;
+  /* justify-content: space-between;  */
+  font-size: small;
+ 
+ }
+ .icon-con{
+    margin-top: 12px;
+
+} 
+.quicks a:hover::before{
+  opacity: 1;
+  color: #841d1d;
+}
+.i:hover{
+  transform: scale(1.5);
+  filter: grayscale(25);
+}
+.kiki::after{
+  content: '';
+  height : 3px;
+  width: 50px;
+  background-color: #0da1f1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+
+
+}
+
+.kiki:hover::after{
+  width: 30px;
+}
