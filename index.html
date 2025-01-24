@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
     crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/Assets/images/logo.jpg">
+  <script src="index.js" defer></script>
   <link rel="stylesheet" href="styles.css">
   <title>७ औं बाग्मती गोल्ड कप 2081</title>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -26,7 +28,7 @@
         <input class="search-box" type="text" placeholder="Search">
         <i style="color:bisque" class="fa-solid fa-magnifying-glass"></i>
       </form>
-      <div class="logo"><img class="logo-img" src="logo.jpg"></div>
+      <div class="logo"><img class="logo-img" src="Assets/images/logo.jpg"></div>
       <div class="hamburger" id="hamburger">
         <i class="fas fa-bars"></i>
         <i  class="fas fa-times"></i>
@@ -86,38 +88,9 @@
           <!-- Add more options as needed -->
         </select>
       </div>
+
+      <a href="news.html" class="login">समाचार</a>
     </nav>
-
-
-
-    <script>
-const hamburger = document.getElementById('hamburger');
-const navbar = document.getElementById('navbar');
-
-hamburger.addEventListener('click', () => {
-  // Toggle the open class on hamburger and navbar
-  hamburger.classList.toggle('open');
-  navbar.classList.toggle('open');
-
-  // Toggle visibility of icons
-  const barsIcon = hamburger.querySelector('.fa-bars');
-  const timesIcon = hamburger.querySelector('.fa-times');
-
-  if (navbar.classList.contains('open')) {
-    barsIcon.style.display = 'none';
-    timesIcon.style.display = 'inline';
-  } else {
-    barsIcon.style.display = 'inline';
-    timesIcon.style.display = 'none';
-  }
-});
-
-
-
-
-
-    </script>
-
 
 
     <div class="hero">
@@ -179,29 +152,52 @@ hamburger.addEventListener('click', () => {
       <p>आउँदो खेल: टिम X vs. टिम Y | मिति: २०८१-०१-१५ | समय: २:३० अपराह्न</p>
     </div>
   </section>
+
+  <section class="news">
+    <div class="news-container">
+    <h2>समाचार</h2>
+    <div class="news-card">
+      <img class="news-img" src="./Assets/images/newsphoto.jpg">
+      <a href="#" class="news-link"><h3>छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</h3></a>
+      <h6>२०८० फागुन ३</h6>
+      <p>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर</p>
+    </div>
+    <div class="news-card">
+      <img class="news-img" src="./Assets/images/pab.jpg">
+      <a href="#" class="news-link"><h3>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु</h3></a>
+      <h6>२०८० माघ 4</h6>
+      <p>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु</p>
+    </div>
+    <div class="news-card">
+      <img class="news-img" src="./Assets/images/s.jpg">
+      <a href="#" class="news-link"><h3>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु</h3></a>
+      <h6>२०८१ माघ ८</h6>
+    </div>
+      </div>
+  </section>
   
 
-  <h3 class="news-h1">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिरहरु </h3>
-  <section class="news" id="photo">
-    <div class="news-card">
-      <div class="news-kiki">
+  <h3 class="album-h1">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिरहरु </h3>
+  <section class="album" id="photo">
+    <div class="album-card">
+      <div class="album-kiki">
         <div class="img-section">
-          <img src="./Assets/images/उ.jpg" class="news-img">
+          <img src="./Assets/images/उ.jpg" class="album-img">
       </div>
       <div class="written-section">
           <h4>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर</h4>
       </div>
 
-      <img class="news-img" src="./Assets/images/उ.jpg">
+      <img class="album-img" src="./Assets/images/उ.jpg">
       <!-- <h6>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर </h6>
       <h5>२०८० फागुन १ </h5> -->
       </div>
 
     </div>
-    <div class="news-card">
-      <div class="news-kiki">
+    <div class="album-card">
+      <div class="album-kiki">
         <div class="img-section">
-          <img src="./Assets/images/pab.jpg" class="news-img">
+          <img src="./Assets/images/pab.jpg" class="album-img">
       </div>
       <div class="written-section">
           <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h4>
@@ -214,10 +210,10 @@ hamburger.addEventListener('click', () => {
       </div>
 
     </div>
-    <div class="news-card">
-      <div class="news-kiki">
+    <div class="album-card">
+      <div class="album-kiki">
         <div class="img-section">
-          <img src="./Assets/images/s.jpg" class="news-img">
+          <img src="./Assets/images/s.jpg" class="album-img">
       </div>
       <div class="written-section">
           <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु</h4>
@@ -228,10 +224,10 @@ hamburger.addEventListener('click', () => {
       </div>
 
     </div>
-    <div class="news-card">
-      <div class="news-kiki">
+    <div class="album-card">
+      <div class="album-kiki">
         <div class="img-section">
-          <img src="./Assets/images/f.jpg" class="news-img">
+          <img src="./Assets/images/f.jpg" class="album-img">
       </div>
       <div class="written-section">
           <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका उपाध्यक्ष फणिन्द्र तिमल्सिना ज्यु</h4>
@@ -242,10 +238,10 @@ hamburger.addEventListener('click', () => {
       </div>
 
     </div>
-    <div class="news-card">
-      <div class="news-kiki">
+    <div class="album-card">
+      <div class="album-kiki">
         <div class="img-section">
-          <img src="./Assets/images/j.jpg" class="news-img">
+          <img src="./Assets/images/j.jpg" class="album-img">
       </div>
       <div class="written-section">
           <h4>छैठौं बागमती गोल्डकप प्रतियोगिताका क्रममा म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै </h4>
@@ -256,10 +252,10 @@ hamburger.addEventListener('click', () => {
       </div>
 
     </div>
-    <div class="news-card">
-      <div class="news-kiki">
+    <div class="album-card">
+      <div class="album-kiki">
         <div class="img-section">
-          <img src="./Assets/images/l.jpg" class="news-img">
+          <img src="./Assets/images/l.jpg" class="album-img">
       </div>
       <div class="written-section">
           <h4>छैठौं बागमती गोल्डकप प्रतियोगिता उद्घाटनका क्रममा नृत्य प्रस्तुत गर्दै </h4>
@@ -271,10 +267,10 @@ hamburger.addEventListener('click', () => {
 
 
     </div>
-    <div class="news-card">
-      <div class="news-kiki">
+    <div class="album-card">
+      <div class="album-kiki">
         <div class="img-section">
-          <img src="./Assets/images/d.jpg" class="news-img">
+          <img src="./Assets/images/d.jpg" class="album-img">
       </div>
       <div class="written-section">
           <h4>फुटबल खेल प्रति दर्शकहरुको उत्साह </h4>
@@ -286,7 +282,7 @@ hamburger.addEventListener('click', () => {
     </div>
   </section>
 
-  <h2 class="news-h1">भिडियो</h2>
+  <h2 class="album-h1">भिडियो</h2>
   <section class="video">
     <div class="video-card">
       <div class="video-container">
@@ -302,14 +298,14 @@ hamburger.addEventListener('click', () => {
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <div class="vidbg-color">
-          <h4 class="video-title pad">
+          <h4 class="video-title">
             <h4>छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा समग्र खेलको उदेश्यबारे बोल्नुहुदै निबर्तमान
               खेलकुद अध्यक्ष अरुण बल </h4>
             </h1>
+            <p class="date"> २०८० फागुन ३ </p>
         </div>
         
       </div>
-      <p class="date"> २०८० फागुन ३ </p>
       <!-- <p class="description">यो भिडियोमा पहिलो फुटबल खेलको रोमाञ्चक क्षणहरू देखाइएको छ।</p> -->
       <br><br>
 
@@ -452,5 +448,6 @@ hamburger.addEventListener('click', () => {
     function viewLiveScore() {
       alert('प्रत्यक्ष स्कोर हेर्नुहोस्');
     }
+    </script>
     </body>
 </html>
