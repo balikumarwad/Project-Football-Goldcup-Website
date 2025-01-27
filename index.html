@@ -7,7 +7,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
     crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/Assets/images/logo.jpg">
-  <script src="index.js" defer></script>
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="styles.css">
   <title>७ औं बाग्मती गोल्ड कप 2081</title>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -34,63 +34,64 @@
         <i  class="fas fa-times"></i>
       </div>
       
-
+      <nav class="navbar" id="navbar">
+        <!-- <div class="logo"><img class="logo-img" src="logo.jpg"></div> -->
+        <a href="#" class="home">गृहपृष्ठ
+        </a>
+        <div class="dropdown-container design">
+          <a href="#" class="score">प्रत्यक्ष स्कोर</a>
+          <select class="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div class="dropdown-container design">
+          <a href="#">टिमहरू</a>
+          <select class="dropdown ">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+  
+        <div class="dropdown-container design">
+          <a href="#">तालिका</a>
+          <select class="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+  
+        <div class="dropdown-container design">
+          <a href="#">खेलकुद क्लब</a>
+          <select class="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div class="dropdown-container design">
+          <a href="news.html">सम्पर्क</a>
+          <select class="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+  
+        <a href="news.html
+        " class="login">समाचार</a>
+      </nav>
     </navbar>
 
-    <nav class="navbar" id="navbar">
-      <!-- <div class="logo"><img class="logo-img" src="logo.jpg"></div> -->
-      <a href="#" class="home">गृहपृष्ठ
-      </a>
-      <div class="dropdown-container design">
-        <a href="#" class="score">प्रत्यक्ष स्कोर</a>
-        <select class="dropdown design">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-      <div class="dropdown-container design">
-        <a href="#">टिमहरू</a>
-        <select class="dropdown ">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
 
-      <div class="dropdown-container design">
-        <a href="#">तालिका</a>
-        <select class="dropdown">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-
-      <div class="dropdown-container design">
-        <a href="#">खेलकुद क्लब</a>
-        <select class="dropdown">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-      <div class="dropdown-container design">
-        <a href="news.html">सम्पर्क</a>
-        <select class="dropdown">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-
-      <a href="news.html" class="login">समाचार</a>
-    </nav>
 
 
     <div class="hero">
@@ -128,32 +129,160 @@
       </div>
     </div>
 
-    <div class="previous-matches">
+    <!-- <div class="previous-matches">
       <h2>Previous Matches</h2>
-      <div id="previous-results">
+      <div id="previous-results"> -->
         <!-- Matches will be dynamically added here -->
+        <div class="Previous-Matches">
+          <h2>Previous Matches</h2>
+          <p class="match-table">
+            <table>
+              <caption>Last 4 Match Scores</caption>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Date</th>
+                  <th>Team A</th>
+                  <th>Score</th>
+                  <th>Team B</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2025-01-23</td>
+                  <td>Team X</td>
+                  <td>3</td>
+                  <td>Team Y</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2025-01-20</td>
+                  <td>Team Z</td>
+                  <td>1</td>
+                  <td>Team W</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2025-01-17</td>
+                  <td>Team M</td>
+                  <td>0</td>
+                  <td>Team N</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>2025-01-14</td>
+                  <td>Team A</td>
+                  <td>2</td>
+                  <td>Team B</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+    
+          <!-- <div id="previous-results">
+           Matches will be dynamically added here -->
+     
       </div>
     </div>
 
 
 
-  <section class="section">
-    <h2>टिम जानकारी</h2>
-    <p>टिम A, टिम B, र अन्य टिमहरूको जानकारी यहाँ उपलब्ध छ।</p>
-  </section>
-  <section class="section">
-    <h2>स्पोन्सरहरू</h2>
-    <p>तपाईंको व्यवसायको प्रचारका लागि उपलब्ध स्थान।</p>
-  </section>
-  <section class="section">
-    <h2>प्रत्यक्ष स्कोर</h2>
-    <div id="live-score">
-      <p>चालू खेल: टिम A vs. टिम B | स्कोर: २–१ | समय बाँकी: २५:३० मिनेट</p>
-      <p>आउँदो खेल: टिम X vs. टिम Y | मिति: २०८१-०१-१५ | समय: २:३० अपराह्न</p>
-    </div>
-  </section>
+    <section class="team-info-section">
+      <h2>टिम जानकारी</h2>
+      <p>टिम A, टिम B, र अन्य टिमहरूको जानकारी यहाँ उपलब्ध छ।</p>
+  
+  
+      <div class="team" id="photo">
+        <div class="team">
+          <div class="team-kiki">
+            <div class="img-section">
+              <img src="./Assets/images/club1.png" class="team-img">
+          </div>
+          <div class="written-section">
+              <h4>club name</h4>
+              <p>club info</p>
+          </div>
+          </div>
+    
+        </div>
+        <div class="team">
+          <div class="team-kiki">
+            <div class="img-section">
+              <img src="./Assets/images/club2.png" class="team-img">
+          </div>
+          <div class="written-section">
+              <h4>club name </h4>
+              <p>club info</p>
+          </div>
+          </div>
+    
+        </div>
+        <div class="team-card">
+          <div class="team-kiki">
+            <div class="img-section">
+              <img src="./Assets/images/club1.png" class="team-img">
+          </div>
+          <div class="written-section">
+              <h4>club name</h4>
+              <p>club info</p>
+          </div>
+          </div>
+    
+        </div>
+        <div class="team">
+          <div class="team-kiki">
+            <div class="img-section">
+              <img src="./Assets/images/club2.png" class="team-img">
+          </div>
+          <div class="written-section">
+              <h4>club name</h4>
+              <p>club info</p>
+          </div>
+          </div>
+        </div>
+    </section>
 
-  <section class="news">
+
+
+  <div class="news-page">
+    <div class="new-left">
+      <div class="div-title">
+         <h4> सातौं  बाग्मती गोल्डकप – २०८१</h4>
+         <div id="news-live">
+          <p>च टिम A vs. टिम B</p></br>
+          <p> | स्कोर: २–१ | </p>
+          <p> टिम X vs. टिम Y </p></br> <p> मिति: २०८१-०१-१५ |</p>
+        </div>
+    </div> 
+
+    </div>
+    <div class="news-center-container">
+      <img class="newskiki-img" src="./Assets/images/newsphoto.jpg">
+    <h1 class="news-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et maiores commo</h1>
+    <h5>2025 1 3 wed</h5>
+    <h4 class="news-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit magni fugiat maxime ad officiis, inventore quae, odio ratione alias, est porro totam repellendus dolor aut illum quas voluptates laboriosam debitis.</h4>
+  </div>
+  <div class="news-rightside-card">
+    <div class="news-rightside">
+      <img class="sidenews-image" src="./Assets/images/club1.png">
+    </div>
+    <div class="text-written">
+      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et maiores commo</h1>
+    <h5>2025 1 3 wed</h5>
+    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit magni fugiat maxime ad officiis, inventore quae, odio ratione alias, est porro totam repellendus dolor aut illum quas voluptates laboriosam debitis.</h4>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+  <!-- <section class="news">
     <div class="news-container">
     <h2>समाचार</h2>
     <div class="news-card">
@@ -174,7 +303,7 @@
       <h6>२०८१ माघ ८</h6>
     </div>
       </div>
-  </section>
+  </section> -->
   
 
   <h3 class="album-h1">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिरहरु </h3>
@@ -188,7 +317,6 @@
           <h4>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर</h4>
       </div>
 
-      <img class="album-img" src="./Assets/images/उ.jpg">
       <!-- <h6>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर </h6>
       <h5>२०८० फागुन १ </h5> -->
       </div>
@@ -288,7 +416,7 @@
       <div class="video-container">
         <div class="button-container">
           <h1 class="video-title pad">फुटबल खेलको भिडियो</h1>
-          <button class="video-button">अब हेर्नुहोस्</button>
+          <a href="video.html" class="video-link"><button class="video-button">अब हेर्नुहोस्</button></a>
         </div>
 
         <p class="vid-line"></p>
@@ -392,15 +520,15 @@
               <h1> contactus</h1>
               <div class="contactus">
                 <ion-icon class="icon-con" name="location-outline"></ion-icon>
-                <p>bhagmati, chitwan, <br> ,nepal </p> 
+                <p><br>Hetauda ,Nepal </p> 
               </div>
               <div class="contactus">
                 <ion-icon class="icon-con" name="mail-outline"></ion-icon>
-                <p>rejandhungana@gmail.com, </p> 
+                <p>bagmatigoldcup@gmail.com</p> 
               </div>
               <div class="contactus">
                 <ion-icon class="icon-con" name="call-outline"></ion-icon>
-                <p>9746221982</p> 
+                <p>000000000</p> 
               </div>
                <h1>FOLLOW US </h1>
                <div class="social1">
