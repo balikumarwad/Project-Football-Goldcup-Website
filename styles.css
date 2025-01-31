@@ -3,15 +3,17 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
-  color: #333;
+  color: #2e7d32;
   box-sizing: border-box;
   /* background-color: #333; */
+  background: linear-gradient(90deg, #4caf4f92, #2e7d32b1);
 }
 
 header {
   background: linear-gradient(90deg, #4caf50, #2e7d32);
+  /* background: linear-gradient(to right, #3752c5, #81c784); */
   color: #fff;
-  padding: 1.5rem;
+  padding: 0.51rem;
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
@@ -32,149 +34,199 @@ header {
   display: flex;
   margin-left: 330px;
 }
-
-.navbar-top {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #3752c5, #81c784);
-  /* background:linear-gradient(to right, #fff70b, #37ff00); */
-  padding: 1rem;
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(62, 111, 189, 0.2);
-  height: 50px;
+  padding: 1rem 2rem;
+  position: relative;
+  height: 70px;
 }
 
-/* nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  nav a:hover {
-    background: #66bb6a;
-  } */
-
-.design:hover {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to right, #3752c5, #81c784);
-  padding: 1rem;
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(62, 111, 189, 0.2);
-  height: 239px;
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 45%;
+  background: linear-gradient(to bottom, #3752c5, #81c784);
+  flex-direction: column;
+  padding: 80px 20px 20px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: block;
 }
 
+.nav-links.active {
+  left: 0;
+}
+
+.nav-links.active .cross {
+  display: block;
+}
+
+.dropdown-content {
+  position: static;
+  display: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+  margin-top: 10px;
+}
 
 .dropdown {
+  position: relative;
+}
+
+.dropdown-content {
   display: none;
-  /* Initially hide the dropdown */
+  position: absolute;
+  background-color: #f9f9f9;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-.dropdown-container:hover .dropdown {
+.dropdown:hover .dropdown-content {
   display: block;
-  /* Show the dropdown when hovering over the container */
-  background: none;
 }
 
-.search-box {
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.search {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  width: 10px;
-  position: absolute;
-  margin-left: 91px;
-}
-
-.search-box:focus {
-  border-color: #4CAF50;
-  /* Green color for the border */
-  outline: none;
-  /* Removes the default focus outline */
-}
-
-.hamburger {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  cursor: pointer;
-  font-size: 1.5rem;
+.dropdown-content a {
   color: black;
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #262626;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1224px;
+  width: 92%;
+  margin: 0 auto;
 }
 
 .navbar {
+  width: auto;
+  min-height: 70px;
   display: flex;
-  gap: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 45%;
-  height: 100vh;
-  background: url('./Assets/images/herobg.png') no-repeat center center;
-  background-size: cover;
-  background-size: cover;
-  display: none;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  transition: transform 0.3s;
-  z-index: 999;
 }
 
-.navbar.open {
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-menu {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: rgb(255, 166, 0);
-  font-size: 1.5rem;
-  margin: 1rem 0;
+.nav-link {
+  transition: 0.3s ease-out;
 }
 
-.fa-bars {
-  display: inline;
-  /* Show bars icon by default */
+.nav-link:hover {
+  color: dodgerblue;
 }
 
-.fa-times {
+.hamburger {
   display: none;
-  /* Hide the times icon initially */
+  cursor: pointer;
 }
 
-.hamburger.open .fa-bars {
-  display: none;
-  /* Hide bars icon when open */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
 }
 
-.hamburger.open .fa-times {
-  display: visible;
-  /* Show times icon when open */
+.logo img {
+  height: 40px;
 }
 
 
+
+@media(max-width:1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #37a94f;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 30px;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .logo img {
+    height: 40px;
+    border-radius: 15px;
+  }
+
+}
 
 .hero {
   text-align: center;
   padding: 1.6rem;
-  background: url('./Assets/images/stadium.jpg') no-repeat center center;
+  background: url('./Assets/images/hero.png') no-repeat center center;
   background-size: cover;
   background-size: cover;
   /* Explicitly define the background size */
@@ -226,7 +278,7 @@ header {
   font-size: 0.85rem;
   height: 90px;
   margin-top: 220px;
-  width: 1470px;
+  /* width: 1470px; */
   color: white;
 }
 
@@ -334,6 +386,13 @@ header {
   margin: 0.5rem 0;
 }
 
+.white-match-card {
+  background: #fff;
+  color: #333;
+  margin: 10px 58px !important;
+}
+
+
 .club-img {
   width: 70px;
   height: 70px;
@@ -384,30 +443,33 @@ header {
   }
 
   .news-center-container{
-    height: 700px;
-    width: 650px;
+    /* height: 700px;
+    width: 650px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-.news-center-container-img {
-  height: 300px;
-  width: 650px;
+.news-center-container img {
+  /* height: 300px;
+  width: 650px; */
+  height: 199px;
+  width: 333px;
+  margin-bottom: 15px;
   /* justify-content: center;
   justify-items: center; */
 }
+
 .news-description{
   margin-left: 4px;
   margin-right: 5px;
 }
 
 .news-center-container:hover {
-  background-color: #e0e5e8;
+  /* background-color: #e0e5e8; */
   /* transform: scale(1.1); */
 }
 
-.new-left{
-  background-color: white;
-  width: 250px;
-  height: 400px;
-}
+
 /* .div-title{
   background-color: #3752c5;
 } */
@@ -418,6 +480,7 @@ header {
 .sidenews-image{
   width: 350px;
 }
+
 .text-written{
   width: 350px;
   border-radius: 5px;
@@ -513,10 +576,10 @@ header {
   width: 350px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 120px;
-  justify-content: space-between;
-  justify-items: center;
+  justify-content: center;
+  /* justify-items: center; */
   margin: 30px  ;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 
   /* display: flex;
   flex-direction: column;
@@ -632,7 +695,7 @@ height: 100%; */
   display: flex;
   flex-direction: column;
   width: 90vw;
-  height: 25vh;
+  height: 30vh;
   /* background: aquamarine; */
 }
 
@@ -825,9 +888,10 @@ height: 100%; */
   /* flex-direction: column; */
   justify-content: center;
   margin: auto;
-  align-items: center;
+  align-items: flex-start; 
   margin-top: 20px;
   cursor: pointer;
+  position: relative;
 }
 
 .news-main-card img{
@@ -854,6 +918,9 @@ height: 100%; */
   text-decoration: none;
   cursor: pointer;
 }
+.link-news-mob{
+  width: auto;
+}
 
 .news-link:hover{
   color: #3752c5;
@@ -875,24 +942,36 @@ height: 100%; */
   align-self: flex-end;
   align-items: end; */
   /* margin-right: 1em; */
-  position: absolute;
+  visibility: hidden;
+  /* position: absolute; */
   /* width: 50px;  */
 }
 
 .news-date{
   display: flex;
   font-size: 0.7rem;
-  color: darkgrey;
-  margin-top: 1em;
+  color: rgb(235, 17, 17);
+  /* margin-top: 1em;
   align-self: flex-end;
-  align-items: end;
+  align-items: end; */
+  align-self: flex-start; /* Ensures date is aligned properly */
+  margin-top: 5px; /* Adjusts spacing below subtitle */
   /* margin-right: 1em; */
-  position: absolute;
+  /* position: absolute; */
   /* width: 50px;  */
 }
 
 
-
+.featurenews-img{
+  border-radius: 15px;
+  width: 250px;
+}
+.news-main-container{
+  display:flex;
+ justify-content:center;
+ flex-direction: column;
+ }
+ 
 
 /* Video Section */
 
@@ -998,7 +1077,7 @@ height: 100%; */
   transform: translateY(-5px);
   background:linear-gradient(to right, #3752c5, #81c784);
   box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 33rem; /* Expanded height */
+  /* height: 33rem; Expanded height */
 }
 .match-table {
   font-size: 2rem;
@@ -1009,43 +1088,12 @@ height: 100%; */
 }
 
 
-table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-th, td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-th {
-  background-color: transparent;
-  /* background-color: #007bff; */
-  color: black;
-  font-weight: bold;
-}
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-tr:hover {
-  background-color: #f1f1f1;
-}
-caption {
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f9f9f9;
-}
-
 
 
 
 .team-info-section {
   margin: 1.5rem auto;
-  max-width: 90%;
+  /* max-width: 90%; */
   padding: 1rem;
   flex: 1 1 calc(30% - 1rem);
   background-color: #f9f9f9;
@@ -1056,14 +1104,14 @@ caption {
   transition: transform 0.3s, box-shadow 0.3s, height 0.3s;
   overflow: hidden;
   position: relative;
-  height: 9rem;
+  /* height: 9rem; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .team-info-section{
   transform: translateY(-5px);
   background-color:white;
   box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 33rem; /* Expanded height */
+  /* height: 33rem; Expanded height */
 }
 
 
@@ -1129,6 +1177,245 @@ caption {
 }
 
 
+
+
+
+.home-page-news{
+  display: flex;
+  flex-direction: column;
+  background: #37003c57;
+  /* gap: 57px; */
+  padding: 11px;
+  justify-content: space-evenly;
+}
+
+.matches-round{
+  display: flex;
+  background: #37003cea;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 25px;
+  color: #2e7d32;
+  width: 70%;
+  justify-self: center;
+  margin-top: 5rem;
+  margin-bottom: -10px;
+}
+
+
+
+/* Scores Page Design */
+
+.white-match-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #37fbe757;
+  transition: transform 0.3s, box-shadow 0.3s, height 0.3s;
+  overflow: hidden;
+  border-bottom: 1px solid #fff176;
+  /* box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.1); */
+  box-shadow: inset 0 4px 10px 5px rgb(255 225 9 / 81%);
+  width: max-content;
+  justify-self: center;
+}
+
+.match-info {
+  text-align: center;
+}
+
+.match-date,
+.match-stadium {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.club-logo {
+  /* flex: 1;
+  text-align: center; */
+}
+
+.previous-matches-club-img {
+  width: 50px;
+  height: 50px;
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+}
+
+.match-score {
+  /* flex: 1;
+  text-align: center; */
+}
+
+.full-time {
+  font-size: 16px;
+  font-weight: bold;
+  /* margin: 0; */
+}
+
+.score {
+  font-size: 23px;
+  width: 37px;
+}
+
+.match-top
+{
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  justify-self: flex-start;
+}
+.logo-card-container{
+  display: flex;
+ /* gap: 1rem; */
+ padding: 0em 1em;
+ background: gainsboro;
+ border-radius: 55px;
+justify-self: center;
+ justify-content: center;
+width: max-content;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+/* CSS for managing after all CSS Done */
+
+.about-news{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: left;
+  padding: 2px;
+  gap: 11px;
+}
+
+.about-news p{
+  font-size: x-small;
+
+}
+
+.about-news h1{
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.about-news h4{
+  font-size: 0.82rem;
+}
+.about-news p,
+.about-news h1,
+.about-news h4 {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes any extra padding */
+}
+
+
+
+
+/* Container for both news cards (places them side by side) */
+.news-main-container {
+  display: flex;
+  flex-direction: row; /* Ensures horizontal alignment */
+  justify-content: center; /* Centers content */
+  align-items: flex-start; /* Aligns cards at the top */
+  gap: 0px; /* Space between cards */
+  width: 100%; /* Ensures it takes full width */
+}
+/* Each news card */
+.news-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  width: 250px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+/* Image & Date container */
+.news-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* News Image */
+.news-main-card img {
+  /* width: 173px;
+  height: 99.5px; */
+  border-radius: 6px;
+  padding: 3px;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.news-main-img:hover {
+  transform: scale(1);
+}
+
+/* Date (Positioned below the image) */
+.news-date {
+  font-size: 0.7rem;
+  color: rgb(222, 21, 21);
+  /* margin-top: 3px;  */
+  /* Space between image and date */
+  text-align: center;
+}
+
+/* News title */
+.news-link {
+  font-size: 0.78rem;
+  width: 90%;
+  text-align: justify;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/* News subtitle */
+.news-subtitle {
+  font-size: 0.75rem;
+  width: 100%;
+  padding: 5px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive CSS For Computer Screens and large Screens */
 
 @media  screen and (min-width:768px) {
@@ -1156,7 +1443,8 @@ caption {
 
 .navbar a {
   text-decoration: none;
-  color: rgb(255, 166, 0);
+  /* color: rgb(255, 166, 0); */
+  color: white;
   font-size: 1.5rem;
   margin: 0 1rem ;
 }
@@ -1169,44 +1457,76 @@ caption {
 }
 .hamburger {
   display: none;
-  /* Hide the hamburger icon by default */}
+  /* Hide the hamburger icon by default */
+}
+
+
+
+
+
+
+
+
+.news-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+  align-items: flex-start;
+  margin-top: 20px;
+  cursor: pointer;
+  /* height: 375px; */
+}
 
 .news-main-card img{
-  width: 434px;
-  height: 241.5px;
+  width: 252px;
+  height: 143.5px;
+  margin-top: -27px;
+  border-radius: 15px;
+  margin-bottom: 174px;
 }
 
 .news-link {
-  font-size: 1.78rem;
-  width: 925px;
+  width: auto;
+  font-size: 0.78rem;
   text-align: justify;
   padding: 37px;
   text-decoration: none;
+  margin-top: -12rem;
+  padding-left: 14px;
 }
 
 .news-date {
   /* display: flex; */
   font-size: 0.7rem;
-  color: darkgrey;
+  color: rgb(218, 24, 24);
   margin-top: 18em;
-  /* align-self: self-start;
-  align-items: flex-start; */
-  margin-right: 37em;
+  margin-right: 33em;
   position: absolute;
   /* width: 50px; */
 }
 
-.news-subtitle{
-    /* display: flex; */
-    font-size: 0.7rem;
-    /* color: darkgrey; */
-    margin-top: 7em;
-    margin-right: 16em;
-    padding-top: 37px;
-    }
+.news-subtitle {
+  padding-left: 15px;
+  font-size: 0.7rem;
+  /* color: darkgrey; */
+  margin-top: 24em;
+}
+
+
+.about-news{
+  margin-right: 63px;
+}
 
 
 
+/* Home Page News Section */
+
+.news-center-container img {
+  height: 347px;
+  width: 642px;
+  margin-bottom: 15px;
+}
 
 /* Matches Score Section */
 
@@ -1244,38 +1564,6 @@ caption {
   color:#f9f9f9;
   font-size: 1.5rem;
   font-weight: 400;
-}
-
-
-table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-th, td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-th {
-  background-color: transparent;
-  /* background-color: #007bff; */
-  color: black;
-  font-weight: bold;
-}
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-tr:hover {
-  background-color: #f1f1f1;
-}
-caption {
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f9f9f9;
 }
 
 
@@ -1335,17 +1623,7 @@ caption {
   margin-left: 100px;
 }
 
-/* .news-cards{
-  display: flex;
-   height: 400px;
-   width: 350px;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 120px;
-   justify-content: space-between;
-   justify-items: center;
-   margin: 30px  ;
-   margin-left: 20px;
-} */
+
 .team-kiki{
    background-color: #f7f7f7;
    margin: 10px ;
@@ -1444,5 +1722,63 @@ caption {
       justify-content: space-around;
       flex-direction: row;
   }
+
+  .match-top {
+    display: flex;
+    gap: 19rem;
+    justify-content: center;
+    justify-self: flex-start;
+  }
+
+
+  .home-page-news{
+    display: flex;
+    flex-direction: row;
+    background: #37003c57;
+    /* gap: 57px; */
+    padding: 64px;
+    justify-content: space-evenly;
+  }
+
+  .news-main-container {
+    display: flex;
+    flex-direction: row; /* Ensures horizontal alignment */
+    justify-content: center; /* Centers content */
+    align-items: flex-start; /* Aligns cards at the top */
+    gap: 0px; /* Space between cards */
+    width: 100%; /* Ensures it takes full width */
+  }
+
+  .news-main-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: self-start;
+    gap: 42px;
+  }
+
+  .news-date {
+    font-size: 0.7rem;
+    color: rgb(222, 21, 21);
+    margin-top: 122px;
+    margin-left: 7px;
+    white-space: nowrap;
+    text-align: left;
 }
 
+
+}
+
+
+.flex-column{
+  display: flex;
+  /* flex-direction: column; */
+}
+
+
+
+
+* {
+  /* outline: 1px solid blue; */
+   /* This will help you visualize elements */
+}
