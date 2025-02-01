@@ -3,15 +3,17 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
-  color: #333;
+  color: #2e7d32;
   box-sizing: border-box;
   /* background-color: #333; */
+  background: linear-gradient(90deg, #4caf4f92, #2e7d32b1);
 }
 
 header {
   background: linear-gradient(90deg, #4caf50, #2e7d32);
+  /* background: linear-gradient(to right, #3752c5, #81c784); */
   color: #fff;
-  padding: 1.5rem;
+  padding: 0.51rem;
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
@@ -32,149 +34,200 @@ header {
   display: flex;
   margin-left: 330px;
 }
-
-.navbar-top {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #3752c5, #81c784);
-  /* background:linear-gradient(to right, #fff70b, #37ff00); */
-  padding: 1rem;
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(62, 111, 189, 0.2);
-  height: 50px;
+  padding: 1rem 2rem;
+  position: relative;
+  height: 70px;
+} */
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 45%;
+  background: linear-gradient(to bottom, #3752c5, #81c784);
+  flex-direction: column;
+  padding: 80px 20px 20px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: block;
 }
 
-/* nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  nav a:hover {
-    background: #66bb6a;
-  } */
-
-.design:hover {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to right, #3752c5, #81c784);
-  padding: 1rem;
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(62, 111, 189, 0.2);
-  height: 239px;
+.nav-links.active {
+  left: 0;
 }
 
+.nav-links.active .cross {
+  display: block;
+}
+
+.dropdown-content {
+  position: static;
+  display: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+  margin-top: 10px;
+}
 
 .dropdown {
+  position: relative;
+}
+
+.dropdown-content {
   display: none;
-  /* Initially hide the dropdown */
-}
-
-.dropdown-container:hover .dropdown {
-  display: block;
-  /* Show the dropdown when hovering over the container */
-  background: none;
-}
-
-.search-box {
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.search {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  width: 10px;
   position: absolute;
-  margin-left: 91px;
-}
-
-.search-box:focus {
-  border-color: #4CAF50;
-  /* Green color for the border */
-  outline: none;
-  /* Removes the default focus outline */
-}
-
-.hamburger {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  cursor: pointer;
-  font-size: 1.5rem;
+  background-color: #f9f9f9;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
   color: black;
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #262626;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1224px;
+  width: 92%;
+  margin: 0 auto;
 }
 
 .navbar {
+  width: auto;
+  min-height: 70px;
   display: flex;
-  gap: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 45%;
-  height: 100vh;
-  background: url('./Assets/images/herobg.png') no-repeat center center;
-  background-size: cover;
-  background-size: cover;
-  display: none;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  transition: transform 0.3s;
-  z-index: 999;
 }
 
-.navbar.open {
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-menu {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: rgb(255, 166, 0);
-  font-size: 1.5rem;
-  margin: 1rem 0;
+.nav-link {
+  transition: 0.3s ease-out;
 }
 
-.fa-bars {
-  display: inline;
-  /* Show bars icon by default */
+.nav-link:hover {
+  color: dodgerblue;
 }
 
-.fa-times {
+.hamburger {
   display: none;
-  /* Hide the times icon initially */
+  cursor: pointer;
 }
 
-.hamburger.open .fa-bars {
-  display: none;
-  /* Hide bars icon when open */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
 }
 
-.hamburger.open .fa-times {
-  display: visible;
-  /* Show times icon when open */
+.logo img {
+  height: 40px;
 }
 
 
+
+@media(max-width:1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #37a94f;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 30px;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .logo img {
+    height: 40px;
+    border-radius: 15px;
+  }
+
+}
 
 .hero {
   text-align: center;
   padding: 1.6rem;
-  background: url('./Assets/images/stadium.jpg') no-repeat center center;
+  background: url('./Assets/images/hero.png') no-repeat center center;
   background-size: cover;
   background-size: cover;
   /* Explicitly define the background size */
@@ -226,7 +279,7 @@ header {
   font-size: 0.85rem;
   height: 90px;
   margin-top: 220px;
-  width: 1470px;
+  /* width: 1470px; */
   color: white;
 }
 
@@ -306,7 +359,7 @@ header {
   max-width: 90%;
   padding: 1rem;
   border-radius: 10px;
-  background-color: #fff;
+  /* background-color: #fff; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -325,8 +378,10 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin-bottom: 1rem;
-  /* display: flex;
-    position: absolute; */
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .match-card p {
@@ -334,29 +389,24 @@ header {
   margin: 0.5rem 0;
 }
 
-.club-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  margin-top: 25px;
-  margin-left: 25px;
-}
+/* .white-match-card {
+  background: #fff;
+  color: #333;
+  margin: 10px 58px !important;
+} */
 
-.right {
+
+.left{
+  /* margin: 10px 0; */
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  margin-top: -87px;
-  float: right;
-  /* margin-left: 441px;
-     */
-  justify-content: flex-end;
+}
+.right{
+  /* margin: 10px 0; */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 /* news */
@@ -384,30 +434,33 @@ header {
   }
 
   .news-center-container{
-    height: 700px;
-    width: 650px;
+    /* height: 700px;
+    width: 650px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-.news-center-container-img {
-  height: 300px;
-  width: 650px;
+.news-center-container img {
+  /* height: 300px;
+  width: 650px; */
+  height: 199px;
+  width: 370px;
+  margin-bottom: 15px;
   /* justify-content: center;
   justify-items: center; */
 }
+
 .news-description{
   margin-left: 4px;
   margin-right: 5px;
 }
 
 .news-center-container:hover {
-  background-color: #e0e5e8;
+  /* background-color: #e0e5e8; */
   /* transform: scale(1.1); */
 }
 
-.new-left{
-  background-color: white;
-  width: 250px;
-  height: 400px;
-}
+
 /* .div-title{
   background-color: #3752c5;
 } */
@@ -418,6 +471,7 @@ header {
 .sidenews-image{
   width: 350px;
 }
+
 .text-written{
   width: 350px;
   border-radius: 5px;
@@ -497,49 +551,39 @@ header {
   padding: 1rem;
   color: #0a0a0a;
   margin-top: 10px;
-  /* background: #99c7e4; */
+  border-top: 3px solid darkgray;
 }
 
+.news-h1{
+  padding: 1rem;
+  text-align: center;
+  color: green;
+}
 .album-h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 1rem; */
+  padding: 1rem;
+  text-align: center;
+  margin-top: 65px;
+  color: green;
 }
 
 .album-card {
   display: flex;
-  height: 400px;
-  width: 350px;
+  height: 420px;
+  width: 348px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 120px;
-  justify-content: space-between;
-  justify-items: center;
+  justify-content: center;
   margin: 30px  ;
-  margin-left: 20px;
-
-  /* display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* padding: 1rem;
-  /* color: #0a0a0a;
-  margin-top: 10px; */
+  margin-bottom: -29px;
+  color: green;
 }
 
-/* .album-cards{
-  display: flex;
-   height: 400px;
-   width: 350px;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 120px;
-   justify-content: space-between;
-   justify-items: center;
-   margin: 30px  ;
-   margin-left: 20px;
-} */
 .album-kiki{
-   background-color: #f7f7f7;
+  background:linear-gradient(90deg, #4caf4f92, #2e7d32b1);
+  background: none;
    margin: 20px ;
    position: relative;
 }
@@ -559,11 +603,7 @@ header {
   /* margin-top: 0px; */
 }
 
- .album-card h5 {
-  /* font-size: 0.79em;  */
-  /* color: grey; */
-  /* margin-top: -3em; */
-}
+
 
 /** Video Section **/
 
@@ -571,15 +611,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-left: 2.5em; */
-  /* margin-top: 1em; */
-  /* gap: 1em; */
-  /* width: 100%;
-height: 100%; */
-  /* padding: 1em; */
-  /* background: #99c7e4; */
-  border: 3px solid darkgray;
-
+  border-top: 3px solid darkgray;
 }
 
 .video-card {
@@ -590,12 +622,12 @@ height: 100%; */
   /* height: 397px; */
   /* background-color: #5e6eeb; */
   /* width: 50px; */
-  /* padding: 1.2em; */
+  padding: 1.2em;
 }
 
 .video-title {
   font-size: 1.2em;
-  color: black;
+  color: green;
   margin-top: 1em;
 }
 
@@ -633,7 +665,6 @@ height: 100%; */
   flex-direction: column;
   width: 90vw;
   height: 25vh;
-  /* background: aquamarine; */
 }
 
 .video-container {
@@ -644,6 +675,10 @@ height: 100%; */
   margin: auto;
 }
 
+.vidbg-color h4{
+  padding-left: 1.2em;
+}
+
 .video-self:hover {
   /* background-color: #5e6eeb; */
   /* transform: scale(1.1); */
@@ -651,7 +686,7 @@ height: 100%; */
 
 .video-button {
   padding: 0.57rem 1.47rem;
-  background-color: #ffd700;
+  /* background-color: #ffd700; */
   border: none;
   font-size: 0.7rem;
   font-weight: bold;
@@ -659,8 +694,10 @@ height: 100%; */
   cursor: pointer;
   border-radius: 5px;
   margin: 0.5rem;
+  margin-top: 2.5em;
   height: 2.37rem;
   align-self: center;
+  background: linear-gradient(to right, #fff70b, #37ff00);
   transition: transform 0.3s, background-color 0.3s;
 }
 
@@ -825,18 +862,18 @@ height: 100%; */
   /* flex-direction: column; */
   justify-content: center;
   margin: auto;
-  align-items: center;
+  align-items: flex-start; 
   margin-top: 20px;
   cursor: pointer;
+  position: relative;
 }
 
 .news-main-card img{
   float: left;
-  width: 150px;
-  height: 86.5px;
+  width: 182px;
+  height: 91.5px;
   display: flex;
   align-self: flex-start;
-  border-radius: 6px;
   padding: 3px;
   transform: scale(0.95);
   transition: transform .25s ease;
@@ -853,6 +890,9 @@ height: 100%; */
   padding: 8px;
   text-decoration: none;
   cursor: pointer;
+}
+.link-news-mob{
+  width: auto;
 }
 
 .news-link:hover{
@@ -875,24 +915,36 @@ height: 100%; */
   align-self: flex-end;
   align-items: end; */
   /* margin-right: 1em; */
-  position: absolute;
+  display: none;
+  /* position: absolute; */
   /* width: 50px;  */
 }
 
 .news-date{
   display: flex;
   font-size: 0.7rem;
-  color: darkgrey;
-  margin-top: 1em;
+  color: rgb(235, 17, 17);
+  /* margin-top: 1em;
   align-self: flex-end;
-  align-items: end;
+  align-items: end; */
+  align-self: flex-start; /* Ensures date is aligned properly */
+  margin-top: 5px; /* Adjusts spacing below subtitle */
   /* margin-right: 1em; */
-  position: absolute;
+  /* position: absolute; */
   /* width: 50px;  */
 }
 
 
-
+.featurenews-img{
+  border-radius: 15px;
+  width: 250px;
+}
+.news-main-container{
+  display:flex;
+ justify-content:center;
+ flex-direction: column;
+ }
+ 
 
 /* Video Section */
 
@@ -907,6 +959,7 @@ height: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* justify-content: center; */
   background: linear-gradient(to right, #3752c5, #1c8df0);
   padding: 1rem;
   color: #fff;
@@ -947,9 +1000,10 @@ height: 100%; */
 
 .video-link{
   font-size: 0.78rem;
-  width: 222px;
+  width: auto; 
   text-align: justify;
-  padding: 8px;
+  /* padding: 8px; */
+  margin-bottom: 10px;
   text-decoration: none;
 }
 
@@ -998,7 +1052,7 @@ height: 100%; */
   transform: translateY(-5px);
   background:linear-gradient(to right, #3752c5, #81c784);
   box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 33rem; /* Expanded height */
+  /* height: 33rem; Expanded height */
 }
 .match-table {
   font-size: 2rem;
@@ -1009,43 +1063,12 @@ height: 100%; */
 }
 
 
-table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-th, td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-th {
-  background-color: transparent;
-  /* background-color: #007bff; */
-  color: black;
-  font-weight: bold;
-}
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-tr:hover {
-  background-color: #f1f1f1;
-}
-caption {
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f9f9f9;
-}
-
 
 
 
 .team-info-section {
   margin: 1.5rem auto;
-  max-width: 90%;
+  /* max-width: 90%; */
   padding: 1rem;
   flex: 1 1 calc(30% - 1rem);
   background-color: #f9f9f9;
@@ -1056,14 +1079,14 @@ caption {
   transition: transform 0.3s, box-shadow 0.3s, height 0.3s;
   overflow: hidden;
   position: relative;
-  height: 9rem;
+  /* height: 9rem; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .team-info-section{
   transform: translateY(-5px);
   background-color:white;
   box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 33rem; /* Expanded height */
+  /* height: 33rem; Expanded height */
 }
 
 
@@ -1129,6 +1152,248 @@ caption {
 }
 
 
+
+
+
+.home-page-news{
+  display: flex;
+  flex-direction: column;
+  /* background: #37003c57; */
+  /* gap: 57px; */
+  padding: 11px;
+  justify-content: space-evenly;
+  border-top: 3px solid darkgray;
+}
+
+.matches-round{
+  display: flex;
+  background: #37003cea;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 25px;
+  color: #2e7d32;
+  width: 70%;
+  justify-self: center;
+  margin-top: 5rem;
+  margin-bottom: -10px;
+}
+
+
+
+/* Scores Page Design */
+
+.white-match-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #37fbe757;
+  transition: transform 0.3s, box-shadow 0.3s, height 0.3s;
+  overflow: hidden;
+  border-bottom: 1px solid #fff176;
+  /* box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.1); */
+  box-shadow: inset 0 4px 10px 5px rgb(255 225 9 / 81%);
+  width: max-content;
+  justify-self: center;
+}
+
+.match-info {
+  text-align: center;
+}
+
+.match-date,
+.match-stadium {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.club-logo {
+  /* flex: 1;
+  text-align: center; */
+}
+
+.previous-matches-club-img {
+  width: 50px;
+  height: 50px;
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+}
+
+.match-score {
+  /* flex: 1;
+  text-align: center; */
+}
+
+.full-time {
+  font-size: 16px;
+  font-weight: bold;
+  /* margin: 0; */
+}
+
+.score {
+  font-size: 23px;
+  width: 37px;
+}
+
+.match-top
+{
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  justify-self: flex-start;
+}
+.logo-card-container{
+  display: flex;
+ /* gap: 1rem; */
+ padding: 0em 1em;
+ background: gainsboro;
+ border-radius: 55px;
+justify-self: center;
+ justify-content: center;
+width: max-content;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+/* CSS for managing after all CSS Done */
+
+.about-news{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: left;
+  padding: 2px;
+  gap: 11px;
+}
+
+.about-news p{
+  font-size: x-small;
+
+}
+
+.about-news h1{
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.about-news h4{
+  font-size: 0.82rem;
+}
+.about-news p,
+.about-news h1,
+.about-news h4 {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes any extra padding */
+}
+
+
+
+
+/* Container for both news cards (places them side by side) */
+.news-main-container {
+  display: flex;
+  flex-direction: row; /* Ensures horizontal alignment */
+  justify-content: center; /* Centers content */
+  align-items: flex-start; /* Aligns cards at the top */
+  gap: 0px; /* Space between cards */
+  width: 100%; /* Ensures it takes full width */
+}
+/* Each news card */
+.news-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  width: 250px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+/* Image & Date container */
+.news-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* News Image */
+.news-main-card img {
+  /* width: 173px;
+  height: 99.5px; */
+  border-radius: 6px;
+  padding: 3px;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+  border-radius: 9px;
+}
+
+/* Hover effect */
+.news-main-img:hover {
+  transform: scale(1);
+}
+
+/* Date (Positioned below the image) */
+.news-date {
+  font-size: 0.7rem;
+  color: rgb(222, 21, 21);
+  /* margin-top: 3px;  */
+  /* Space between image and date */
+  text-align: center;
+  margin-left: 9px;
+}
+
+/* News title */
+.news-link {
+  font-size: 0.78rem;
+  width: 90%;
+  text-align: justify;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/* News subtitle */
+.news-subtitle {
+  font-size: 0.75rem;
+  width: 100%;
+  padding: 5px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive CSS For Computer Screens and large Screens */
 
 @media  screen and (min-width:768px) {
@@ -1156,9 +1421,13 @@ caption {
 
 .navbar a {
   text-decoration: none;
-  color: rgb(255, 166, 0);
+  /* color: rgb(255, 166, 0); */
+  color: white;
   font-size: 1.5rem;
   margin: 0 1rem ;
+}
+.dropdown-content a{
+  color: black;
 }
 .logo-img {
   height: 57px;
@@ -1169,44 +1438,80 @@ caption {
 }
 .hamburger {
   display: none;
-  /* Hide the hamburger icon by default */}
+  /* Hide the hamburger icon by default */
+}
+
+
+.match-card{
+  gap: 33rem;
+}
+
+
+
+
+
+.news-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+  align-items: flex-start;
+  margin-top: 20px;
+  cursor: pointer;
+  /* height: 375px; */
+}
 
 .news-main-card img{
-  width: 434px;
-  height: 241.5px;
+  width: 252px;
+  height: 143.5px;
+  margin-top: -27px;
+  border-radius: 15px;
+  margin-bottom: 174px;
 }
 
 .news-link {
-  font-size: 1.78rem;
-  width: 925px;
+  width: auto;
+  font-size: 0.88rem;
   text-align: justify;
-  padding: 37px;
+  padding: 15px;
+  margin-bottom: 7px;
   text-decoration: none;
+  margin-top: -12rem;
+  padding-left: 14px;
 }
 
 .news-date {
   /* display: flex; */
   font-size: 0.7rem;
-  color: darkgrey;
+  color: rgb(218, 24, 24);
   margin-top: 18em;
-  /* align-self: self-start;
-  align-items: flex-start; */
-  margin-right: 37em;
+  margin-right: 33em;
   position: absolute;
   /* width: 50px; */
 }
 
-.news-subtitle{
-    /* display: flex; */
-    font-size: 0.7rem;
-    /* color: darkgrey; */
-    margin-top: 7em;
-    margin-right: 16em;
-    padding-top: 37px;
-    }
+.news-subtitle {
+  display: block;
+  padding-left: 15px;
+  font-size: 0.79rem;
+  color: rgb(15 37 9);
+  margin-top: -5em;
+}
+
+
+.about-news{
+  margin-right: 63px;
+}
 
 
 
+/* Home Page News Section */
+
+.news-center-container img {
+  height: 347px;
+  width: 642px;
+  margin-bottom: 15px;
+}
 
 /* Matches Score Section */
 
@@ -1244,38 +1549,6 @@ caption {
   color:#f9f9f9;
   font-size: 1.5rem;
   font-weight: 400;
-}
-
-
-table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-th, td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-th {
-  background-color: transparent;
-  /* background-color: #007bff; */
-  color: black;
-  font-weight: bold;
-}
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-tr:hover {
-  background-color: #f1f1f1;
-}
-caption {
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f9f9f9;
 }
 
 
@@ -1335,17 +1608,7 @@ caption {
   margin-left: 100px;
 }
 
-/* .news-cards{
-  display: flex;
-   height: 400px;
-   width: 350px;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 120px;
-   justify-content: space-between;
-   justify-items: center;
-   margin: 30px  ;
-   margin-left: 20px;
-} */
+
 .team-kiki{
    background-color: #f7f7f7;
    margin: 10px ;
@@ -1444,9 +1707,70 @@ caption {
       justify-content: space-around;
       flex-direction: row;
   }
+
+  .match-top {
+    display: flex;
+    gap: 19rem;
+    justify-content: center;
+    justify-self: flex-start;
+  }
+
+
+  .home-page-news{
+    display: flex;
+    flex-direction: row;
+    /* background: #37003c57; */
+    /* gap: 57px; */
+    padding: 64px;
+    justify-content: space-evenly;
+  }
+
+  .news-main-container {
+    display: flex;
+    flex-direction: row; /* Ensures horizontal alignment */
+    justify-content: center; /* Centers content */
+    align-items: flex-start; /* Aligns cards at the top */
+    gap: 33px; /* Space between cards */
+    width: 100%; /* Ensures it takes full width */
+    height: 330px;
+  }
+
+  .news-main-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: self-start;
+    gap: 42px;
+  }
+
+  .news-date {
+    font-size: 0.7rem;
+    color: rgb(222, 21, 21);
+    margin-top: 122px;
+    margin-left: 15px;
+    white-space: nowrap;
+    text-align: left;
 }
 
 
+  .video-self{
+    height: 60vh;
+  }
+}
+
+
+.flex-column{
+  display: flex;
+  /* flex-direction: column; */
+}
+
+
+
+
+* {
+  /* outline: 1px solid blue; */
+   /* This will help you visualize elements */
+}
 
 .team-page-mini-nav{
   background-color: #1b5e20;
@@ -1549,33 +1873,27 @@ caption {
   justify-items: center;
 }
 
-.video-page-main-section{
-  /* display: flex;
-  flex-direction: row; 
-  flex: 1 1 0; */
-  /* flex-basis: 100px; */
-  /* flex-wrap: wrap;
-  gap: 16px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
-  gap: 16px; /* Adjust gap between items */
-  /* background-color: rgb(228, 130, 10); */
-}
+   /* for video  */
 
-.video-card-small{
+/* .video-main-container1{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+} */
+
+/* .video-main-card1{
+  display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center;
   margin: auto;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 78px;
-}
+} */
 
-.video-main-card img{
-  width: 269px;
-  height: 146.5px;
-  display: inline-block;
+/* .video-main-card img{
+  float: left;
+  width: 150px;
+  height: 86.5px;
+  display: flex;
   align-self: flex-start;
   border-radius: 6px;
   padding: 3px;
@@ -1587,32 +1905,21 @@ caption {
   text-align: justify;
   padding: 8px;
   text-decoration: none;
-  display: flex;
-  font-size: 0.87rem;
-  color: rgb(128, 67, 207);
-  margin-top: 11em;
-  align-self: flex-start;
-  align-items: start;
-  margin-right: 3em;
-  position: absolute;
-  /* padding-top: 90px; */
-}
+} */
 
-.video-link:hover{
+/* .video-link:hover{
   color: #3752c5;
   text-decoration: underline;
-}
+} */
 
-.video-name{
+/* .video-name{
   display: flex;
-  font-size: 0.87rem;
-  color: rgb(128, 67, 207);
-  margin-top: 18em;
-  align-self: flex-start;
+  font-size: 0.7rem;
+  color: darkgrey; */
+  /* margin-top: 1em; */
+  /* align-self: flex-start;
   align-items: start;
-  margin-left: -0.5rem;
-  position: absolute;
-  /* padding-top: 9px; */
+  margin-right: 3em;
+  position: absolute; */
   /* width: 50px;  */
-}
-
+/* } */

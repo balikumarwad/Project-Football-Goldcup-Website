@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="" stylesheet" href="styles.css">
+</head>
+
+<body>
+  <style>
+    .white-match-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #37fbe757;
+      transition: transform 0.3s, box-shadow 0.3s, height 0.3s;
+      overflow: hidden;
+      border-bottom: 1px solid #fff176;
+      /* box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.1); */
+      box-shadow: inset 0 4px 10px 5px rgb(255 225 9 / 81%);
+      width: max-content;
+      justify-self: center;
+    }
+
+    .match-info {
+      text-align: center;
+    }
+
+    .match-date,
+    .match-stadium {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .club-logo {
+      /* flex: 1;
+                  text-align: center; */
+    }
+
+    .previous-matches-club-img {
+      width: 50px;
+      height: 50px;
+      width: 70px;
+      border-radius: 50%;
+      height: 70px;
+    }
+
+    .match-score {
+      /* flex: 1;
+                  text-align: center; */
+    }
+
+    .full-time {
+      font-size: 16px;
+      font-weight: bold;
+      /* margin: 0; */
+    }
+
+    .score {
+      font-size: 23px;
+      width: 37px;
+    }
+
+    .match-top {
+      display: flex;
+      gap: 19rem;
+      justify-content: center;
+      justify-self: flex-start;
+    }
+
+    @media  screen and (max-width:456px){
+      .match-top {
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+        justify-self: flex-start;
+      }
+      
+    }
+
+
+    .logo-card-container {
+      display: flex;
+      /* gap: 1rem; */
+      padding: 0em 1em;
+      background: gainsboro;
+      border-radius: 55px;
+      justify-self: center;
+      justify-content: center;
+      width: max-content;
+    }
+
+    .matches-round {
+      display: flex;
+      background: #37003cea;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 25px;
+      color: #2e7d32;
+      width: 70%;
+      justify-self: center;
+      margin-top: 5rem;
+      margin-bottom: -10px;
+    }
+  </style>
+
+  <h2 class="matches-round">Round 1</h2>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+ 
+  <h2 class="matches-round">Round 2</h2>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class=" white-match-card">
+    <div class="match-info">
+      <div class="match-top">
+        <div class="match-date">
+          <P>
+            २०८१ माघ १२
+          </P>
+        </div>
+        <div class="full-time">
+          <p>
+            Full Time
+          </p>
+        </div>
+        <div class="match-stadium">
+          <P>
+            रङ्गशाला
+          </P>
+        </div>
+      </div>
+
+      <div class="match-top logo-card-container">
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club1.png" alt="Club 1">
+        </div>
+
+        <div class="match-score">
+          <p class="score">२–१</p>
+        </div>
+
+        <div class="club-logo">
+          <img class="previous-matches-club-img" src="./Assets/images/club2.png" alt="Club 2">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>
