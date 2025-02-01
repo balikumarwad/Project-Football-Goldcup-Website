@@ -40,3 +40,22 @@ self.addEventListener("activate", (event) => {
     })
   );
 });
+self.addEventListener("install", (event) => {
+    console.log("Service Worker installing...");
+    event.waitUntil(
+      caches.open("pwa-cache-v1").then((cache) => {
+        console.log("Caching files...");
+        return cache.addAll(["/", "/index.html", "/styles.css", "/script.js"]);
+      })
+    );
+  });
+  
+  self.addEventListener("fetch", (event) => {
+    console.log("Fetching:", event.request.url);
+    event.respondWith(
+      caches.match(event.request).then((response) => {
+        return response || fetch(event.request);
+      })
+    );
+  });
+  

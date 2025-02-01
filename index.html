@@ -30,7 +30,7 @@
             <li class="nav-item">
             <a href="#" class="nav-link">गृहपृष्ठ</a></li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link">प्रत्यक्ष स्कोर <i class="fas fa-caret-down"></i></a>
+              <a href="scores.html" class="nav-link">प्रत्यक्ष स्कोर <i class="fas fa-caret-down"></i></a>
                 <div class="dropdown-content">
                   <a href="#" class="nav-link">Option 1</a>
                   <a href="#" class="nav-link">Option 2</a>
@@ -38,7 +38,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link">तालिका <i class="fas fa-caret-down"></i></a>
+              <a href="./Rawimages/timeline.jpg" class="nav-link">तालिका <i class="fas fa-caret-down"></i></a>
                 <div class="dropdown-content">
                   <a href="#" class="nav-link">Option 1</a>
                   <a href="#" class="nav-link">Option 2</a>
@@ -95,29 +95,21 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     <div class="live-score">
       <h2>Live Match</h2>
       <div class="match-card">
-        <img class="club-img" src="./Assets/images/club1.png">
-        <p><strong>टिम A</strong> vs. <strong>टिम B</strong></p>
+        <div class="club-logo">
+        <img class="left" src="./Assets/images/club1.png">
+        </div>
+        <!-- <p><strong>टिम A</strong> vs. <strong>टिम B</strong></p> -->
         <p> स्कोर: <span id="live-score">२–१</span></p>
-        <p>समय बाँकी:<span id="time-remaining"> २५:३० </span></p>
-        <!-- <img class="right" src="./Assets/images/club2.png"> -->
+        <!-- <p>समय बाँकी:<span id="time-remaining"> २५:३० </span></p> -->
+        <div class="club-logo">
+        <img class="right" src="./Assets/images/club2.png">
+        </div>
       </div>
     </div>
 
-    <!-- <div class="previous-matches">
-      <h2>Previous Matches</h2>
-      <div id="previous-results"> -->
-    <!-- Matches will be dynamically added here -->
-    <!-- <div class="Previous-Matches">
-          <div class="match-card">
-            <img class="club-img" src="./Assets/images/club1.png">
-            <p><strong>टिम A</strong> vs. <strong>टिम B</strong></p>
-            <p> स्कोर: <span>२–१</span></p>
-            <p>समय बाँकी:<span> २५:३० </span></p> -->
-    <!-- <img class="right" src="./Assets/images/club2.png"> -->
 
 
-
-
+<!-- 
     <section class="team-info-section">
       <h2>टिम जानकारी</h2>
       <p>टिम A, टिम B, र अन्य टिमहरूको जानकारी यहाँ उपलब्ध छ।</p>
@@ -172,20 +164,19 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
           </div>
         </div>
           
-    </section>
+    </section> -->
 
 
 
 
+    <h2 class="news-h1">समाचार</h2>
     <section class="home-page-news">
-
-
       <div class="news-center-container">
         <img class="featurenews-img" src="./Assets/images/newsphoto.jpg">
         <div class="about-news">
           <p class="feature-sm">Feature</p>
-          <h1 class="news-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et maiores commo</h1>
-          <h4 class="news-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </h4>
+          <h1 class="news-description">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</h1>
+          <h4 class="news-description">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</h4>
         </div>
       </div>
       <div class="wrapper">
@@ -215,7 +206,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
       </div>
 
 
-      <div class="news-main-container flex-column">
+      <div class="news-main-container flex-column" >
 
         <!-- First News Card -->
         <div class="news-main-card">
@@ -377,6 +368,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
           </div>
 
           <p class="vid-line"></p>
+          <div class="vidonly-cont">
           <iframe class="video-self" src="https://www.youtube.com/embed/DTnXN6Yney0?si=ZykP0eOCiafJZME0"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -389,7 +381,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
               </h1>
               <p class="date"> २०८० फागुन ३ </p>
           </div>
-
+          </div>
         </div>
         <!-- <p class="description">यो भिडियोमा पहिलो फुटबल खेलको रोमाञ्चक क्षणहरू देखाइएको छ।</p> -->
         <br><br>
@@ -524,8 +516,8 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 
         </div>
         <div class="copyright">
-          <p> Copyright © 2025 बाग्मती </p>
-          <p>made by <a href="https://www.linkedin.com/in/rejan-dhungana-a4336a299/"> nexstep info Tech</a></p>
+          <p> Copyright © 2025 बाग्मती &nbsp;</p>
+          <p> Made with 🤍 by <a href="https://www.linkedin.com/in/rejan-dhungana-a4336a299/"> Next-Step Tech</a></p>
           </di>
       </footer>
     </section>
