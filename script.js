@@ -42,3 +42,6 @@ if ("serviceWorker" in navigator) {
 
 
 
+const viewLiveScore = () => {
+  window.location.href("./Pages/scores.html");
+}
