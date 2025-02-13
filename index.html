@@ -16,109 +16,110 @@
 </head>
 
 <body>
-    <style>
-      
-    </style>
+  <style>
 
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <div class="logo">
-            <img src="Assets/images/logo.jpg" alt="Logo">
-          </div>
-          <ul class="nav-menu">
-            <li class="nav-item">
-            <a href="#" class="nav-link">गृहपृष्ठ</a></li>
-            <li class="nav-item dropdown">
-              <a href="scores.html" class="nav-link">प्रत्यक्ष स्कोर <i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-content">
-                  <a href="#" class="nav-link">Option 1</a>
-                  <a href="#" class="nav-link">Option 2</a>
-                  <a href="#" class="nav-link">Option 3</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="./Rawimages/timeline.jpg" class="nav-link">तालिका <i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-content">
-                  <a href="#" class="nav-link">Option 1</a>
-                  <a href="#" class="nav-link">Option 2</a>
-                  <a href="#" class="nav-link">Option 3</a>
-                </div>
-            </li>
-            <li class="nav-item nav-link"><a href="team.html">खेलकुद क्लब</a></li>
-            <li class="nav-item nav-link"><a href="aboutus.html">सम्पर्क</a></li>
-            <li class="nav-item nav-link"><a href="news.html">समाचार</a></li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </div>
-    </header>
+  </style>
 
-    <script>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="Assets/images/logo.jpg" alt="Logo">
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">गृहपृष्ठ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="Pages/scores.html" class="nav-link">प्रत्यक्ष स्कोर <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#" class="nav-link">Option 1</a>
+              <a href="#" class="nav-link">Option 2</a>
+              <a href="#" class="nav-link">Option 3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="./Rawimages/timeline.jpg" class="nav-link">तालिका <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#" class="nav-link">Option 1</a>
+              <a href="#" class="nav-link">Option 2</a>
+              <a href="#" class="nav-link">Option 3</a>
+            </div>
+          </li>
+          <li class="nav-item nav-link"><a href="Pages/team.html">खेलकुद क्लब</a></li>
+          <li class="nav-item nav-link"><a href="Pages/aboutus.html">सम्पर्क</a></li>
+          <li class="nav-item nav-link"><a href="Pages/news.html">समाचार</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+  <script>
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", (e) => {
-  // Check if the clicked link is part of a dropdown
-  if (!e.target.closest(".dropdown")) {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  }
-}));
-    </script>
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", (e) => {
+      // Check if the clicked link is part of a dropdown
+      if (!e.target.closest(".dropdown")) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    }));
+  </script>
 
 
 
-    <div class="hero">
-      <h1>सातौं बागमती राष्ट्रिय फुटबल प्रतियोगिता-२०८१ </h1>
-      <p>प्रत्यक्ष अपडेट र जानकारी यहीँ पाउनुहोस्!</p>
-      <button onclick="viewLiveScore()">प्रत्यक्ष हेर्नुहोस्</button>
-      <button onclick="viewSchedule()">तालिका हेर्नुहोस्</button>
-      <!-- <div class="hero-section"> 
+  <div class="hero">
+    <h1>सातौं बागमती राष्ट्रिय फुटबल प्रतियोगिता-२०८१ </h1>
+    <p>प्रत्यक्ष अपडेट र जानकारी यहीँ पाउनुहोस्!</p>
+    <button onclick="viewLiveScore()">प्रत्यक्ष हेर्नुहोस्</button>
+    <button onclick="viewSchedule()">तालिका हेर्नुहोस्</button>
+    <!-- <div class="hero-section"> 
       <div class="hero1"> *for supporter!*  
           </div>
      </div> -->
 
-    </div>
+  </div>
 
 
-    <div class="live-score">
-      <h2>Live Match</h2>
-      <div class="match-card">
-        <div class="club-logo">
-        <img class="left" src="./Assets/images/club1.png">
-        </div>
-        <!-- <p><strong>टिम A</strong> vs. <strong>टिम B</strong></p> -->
-        <p> स्कोर: <span id="live-score">२–१</span></p>
-        <!-- <p>समय बाँकी:<span id="time-remaining"> २५:३० </span></p> -->
-        <div class="club-logo">
-        <img class="right" src="./Assets/images/club2.png">
-        </div>
+  <div class="live-score">
+    <h2>Live Match</h2>
+    <div class="match-card">
+      <div class="club-logo">
+        <img class="left" src="./Assets/images/tri.png">
+      </div>
+      <!-- <p><strong>टिम A</strong> vs. <strong>टिम B</strong></p> -->
+      <p> स्कोर: <span id="live-score">२–१</span></p>
+      <!-- <p>समय बाँकी:<span id="time-remaining"> २५:३० </span></p> -->
+      <div class="club-logo">
+        <img class="right" src="./Assets/images/him.jpg">
       </div>
     </div>
+  </div>
 
 
-    <h2 class="news-h1">समाचार</h2>
-    <section class="home-page-news">
-      <div class="news-center-container">
-        <img class="featurenews-img" src="./Assets/images/newsphoto.jpg">
-        <div class="about-news">
-          <p class="feature-sm">Feature</p>
-          <h1 class="news-description">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</h1>
-          <h4 class="news-description">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</h4>
-        </div>
+  <h2 class="news-h1">समाचार</h2>
+  <section class="home-page-news">
+    <div class="news-center-container">
+      <img class="featurenews-img" src="./Assets/images/newsphoto.jpg">
+      <div class="about-news">
+        <p class="feature-sm">Feature</p>
+        <h1 class="news-description">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</h1>
+        <h4 class="news-description">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</h4>
       </div>
-      <div class="wrapper">
+    </div>
+    <div class="wrapper">
       <div class="news-main-container">
 
         <!-- First News Card -->
@@ -127,8 +128,8 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
             <img class="news-main-img" src="./Assets/images/newsphoto.jpg">
             <p class="news-date">२०८० फागुन २</p>
           </div>
-          <a href="#" class="news-link">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</a>
-          <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
+          <a href="#" class="news-link mg-newslink">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</a>
+          <p class="news-subtitle mg-news">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
         </div>
 
         <!-- Second News Card -->
@@ -137,15 +138,15 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
             <img class="news-main-img" src="./Assets/images/pab.jpg">
             <p class="news-date">२०८० फागुन १२</p>
           </div>
-          <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान
+          <a href="#" class="news-link mg-newslink">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान
             ज्यु</a>
-          <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
+          <p class="news-subtitle mg-news">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
         </div>
 
       </div>
 
 
-      <div class="news-main-container flex-column" >
+      <div class="news-main-container flex-column">
 
         <!-- First News Card -->
         <div class="news-main-card">
@@ -153,8 +154,8 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
             <img class="news-main-img" src="./Assets/images/newsphoto.jpg">
             <p class="news-date">२०८० फागुन २</p>
           </div>
-          <a href="#" class="news-link">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</a>
-          <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
+          <a href="#" class="news-link mg-newslink">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</a>
+          <p class="news-subtitle mg-news">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
         </div>
 
         <!-- Second News Card -->
@@ -163,151 +164,151 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
             <img class="news-main-img" src="./Assets/images/pab.jpg">
             <p class="news-date">२०८० फागुन १२</p>
           </div>
-          <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान
+          <a href="#" class="news-link mg-newslink">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान
             ज्यु</a>
-          <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
+          <p class="news-subtitle mg-news">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन्</p>
         </div>
 
       </div>
 
     </div>
-    </section>
+  </section>
 
 
-    <h3 class="album-h1">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिरहरु </h3>
-    <section class="album" id="photo">
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/उ.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर</h4>
-          </div>
+  <h3 class="album-h1">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिरहरु </h3>
+  <section class="album" id="photo">
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/उ.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर</h4>
+        </div>
 
-          <!-- <h6>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर </h6>
+        <!-- <h6>यो भन्दा अघिल्लो सस्करण खेलकुद उद्घाटन समारोहका क्रममा कैद गरिएको तस्बिर </h6>
       <h5>२०८० फागुन १ </h5> -->
+      </div>
+
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/pab.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h4>
         </div>
 
-      </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/pab.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h4>
-          </div>
 
-
-          <!-- <img class="news-img" src="./Assets/images/pab.jpg"> -->
-          <!-- <h6>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h6>
+        <!-- <img class="news-img" src="./Assets/images/pab.jpg"> -->
+        <!-- <h6>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h6>
       <h5>२०८० माघ 4</h5> -->
-        </div>
-
       </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/s.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु</h4>
-          </div>
-          <!-- <img class="news-img" src="./Assets/images/s.jpg"> -->
-          <!-- <h6>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु </h6>
+
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/s.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु</h4>
+        </div>
+        <!-- <img class="news-img" src="./Assets/images/s.jpg"> -->
+        <!-- <h6>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु </h6>
       <h5>२०८१ माघ ८ </h5> -->
-        </div>
-
       </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/f.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका उपाध्यक्ष फणिन्द्र तिमल्सिना ज्यु</h4>
-          </div>
-          <!-- <img class="news-img" src="./Assets/images/f.jpg"> -->
-          <!-- <h6>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका उपाध्यक्ष फणिन्द्र तिमल्सिना ज्यु </h6>
+
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/f.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका उपाध्यक्ष फणिन्द्र तिमल्सिना ज्यु</h4>
+        </div>
+        <!-- <img class="news-img" src="./Assets/images/f.jpg"> -->
+        <!-- <h6>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका उपाध्यक्ष फणिन्द्र तिमल्सिना ज्यु </h6>
       <h5>२०८१ माघ 6 </h5> -->
-        </div>
-
       </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/j.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>छैठौं बागमती गोल्डकप प्रतियोगिताका क्रममा म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै </h4>
-          </div>
-          <!-- <img class="news-img" src="./Assets/images/j.jpg"> -->
-          <!-- <h6>छैठौं बागमती गोल्डकप प्रतियोगिताका क्रममा म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै </h6>
+
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/j.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>छैठौं बागमती गोल्डकप प्रतियोगिताका क्रममा म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै </h4>
+        </div>
+        <!-- <img class="news-img" src="./Assets/images/j.jpg"> -->
+        <!-- <h6>छैठौं बागमती गोल्डकप प्रतियोगिताका क्रममा म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै </h6>
       <h5>२०८१ माघ 7 </h5> -->
-        </div>
-
       </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/l.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>छैठौं बागमती गोल्डकप प्रतियोगिता उद्घाटनका क्रममा नृत्य प्रस्तुत गर्दै </h4>
-          </div>
-          <!-- <img class="news-img" src="./Assets/images/l.jpg"> -->
-          <!-- <h6>छैठौं बागमती गोल्डकप प्रतियोगिता उद्घाटनका क्रममा नृत्य प्रस्तुत गर्दै </h6>
+
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/l.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>छैठौं बागमती गोल्डकप प्रतियोगिता उद्घाटनका क्रममा नृत्य प्रस्तुत गर्दै </h4>
+        </div>
+        <!-- <img class="news-img" src="./Assets/images/l.jpg"> -->
+        <!-- <h6>छैठौं बागमती गोल्डकप प्रतियोगिता उद्घाटनका क्रममा नृत्य प्रस्तुत गर्दै </h6>
       <h5>२०८१ माघ 7 </h5> -->
-        </div>
-
       </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/d.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>फुटबल खेल प्रति दर्शकहरुको उत्साह </h4>
-          </div>
-          <!-- <img class="news-img" src="./Assets/images/d.jpg"> -->
-          <!-- <h6>फुटबल खेल प्रति दर्शकहरुको उत्साह </h6>
+
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/d.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>फुटबल खेल प्रति दर्शकहरुको उत्साह </h4>
+        </div>
+        <!-- <img class="news-img" src="./Assets/images/d.jpg"> -->
+        <!-- <h6>फुटबल खेल प्रति दर्शकहरुको उत्साह </h6>
       <h5>२०८१ माघ 7 </h5> -->
+      </div>
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/pab.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h4>
         </div>
       </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/pab.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h4>
-          </div>
+    </div>
+    <div class="album-card">
+      <div class="album-kiki">
+        <div class="img-section">
+          <img src="./Assets/images/pab.jpg" class="album-img">
+        </div>
+        <div class="written-section">
+          <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h4>
         </div>
       </div>
-      <div class="album-card">
-        <div class="album-kiki">
-          <div class="img-section">
-            <img src="./Assets/images/pab.jpg" class="album-img">
-          </div>
-          <div class="written-section">
-            <h4>म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु </h4>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <h2 class="album-h1">भिडियो</h2>
-    <section class="video">
-      <div class="video-card">
-        <div class="video-container">
-          <div class="button-container">
-            <h1 class="video-title pad">फुटबल खेलको भिडियो</h1>
-            <a href="video.html" class="video-link"><button class="video-button">अब हेर्नुहोस्</button></a>
-          </div>
+  <h2 class="album-h1">भिडियो</h2>
+  <section class="video">
+    <div class="video-card">
+      <div class="video-container">
+        <div class="button-container">
+          <h1 class="video-title pad">फुटबल खेलको भिडियो</h1>
+          <a href="Pages/video.html" class="video-link"><button class="video-button">अब हेर्नुहोस्</button></a>
+        </div>
 
-          <p class="vid-line"></p>
-          <div class="vidonly-cont">
+        <p class="vid-line"></p>
+        <div class="vidonly-cont">
           <iframe class="video-self" src="https://www.youtube.com/embed/DTnXN6Yney0?si=ZykP0eOCiafJZME0"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -320,151 +321,152 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
               </h1>
               <p class="date"> २०८० फागुन ३ </p>
           </div>
-          </div>
         </div>
-        <!-- <p class="description">यो भिडियोमा पहिलो फुटबल खेलको रोमाञ्चक क्षणहरू देखाइएको छ।</p> -->
-        <br><br>
-
-        <div class="video-card-small">
-          <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          <div class="sm-vid-info">
-            <span class="small-date date">२०८० फागुन ०३</span>
-            <span class="small-desc">
-              फुटबल प्रतियोगिताका रोमान्चक खेलहरु
-            </span>
-          </div>
-        </div>
-        <br><br>
-        <div class="video-card-small">
-          <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          <div class="sm-vid-info">
-            <span class="small-date date">२०८० फागुन ०३</span>
-            <span class="small-desc">
-              फुटबल प्रतियोगिताका रोमान्चक खेलहरु
-            </span>
-          </div>
-        </div>
-        <br><br>
-        <div class="video-card-small">
-          <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          <div class="sm-vid-info">
-            <span class="small-date date">२०८० फागुन ०३</span>
-            <span class="small-desc">
-              फुटबल प्रतियोगिताका रोमान्चक खेलहरु
-            </span>
-          </div>
-        </div>
-        <br><br>
-        <div class="video-card-small">
-
-          <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          <div class="sm-vid-info">
-            <span class="small-date date">२०८० फागुन ०३</span>
-            <span class="small-desc">
-              फुटबल प्रतियोगिताका रोमान्चक खेलहरु
-            </span>
-          </div>
-        </div>
-        <br><br>
-        <div class="video-card-small">
-          <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          <div class="sm-vid-info">
-            <span class="small-date date">२०८० फागुन ०३</span>
-            <span class="small-desc">
-              फुटबल प्रतियोगिताका रोमान्चक खेलहरु
-            </span>
-          </div>
-        </div>
-        <br><br>
-        <div class="video-card-small">
-          <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          <div class="sm-vid-info">
-            <span class="small-date date">२०८० फागुन ०३</span>
-            <span class="small-desc">
-              फुटबल प्रतियोगिताका रोमान्चक खेलहरु
-            </span>
-          </div>
-        </div>
-        <br><br>
       </div>
-    </section>
-    <section>
-      <footer class="footer">
-        <div class="link">
-          <div class="row">
-            <div class="col">
-              <h1> contactus</h1>
-              <div class="contactus">
-                <ion-icon class="icon-con" name="location-outline"></ion-icon>
-                <p><br>Hetauda ,Nepal </p>
-              </div>
-              <div class="contactus">
-                <ion-icon class="icon-con" name="mail-outline"></ion-icon>
-                <p>bagmatigoldcup@gmail.com</p>
-              </div>
-              <div class="contactus">
-                <ion-icon class="icon-con" name="call-outline"></ion-icon>
-                <p>000000000</p>
-              </div>
-              <h1>FOLLOW US </h1>
-              <div class="social1">
-                <a href="#"><ion-icon class="i" name="logo-facebook"></ion-icon></a>
-                <a href="#"><ion-icon class="i" name="logo-instagram"></ion-icon></a>
-                <a href="#"><ion-icon class="i" name="logo-youtube"></ion-icon></a>
-                <a href="#"><ion-icon class="i" name="logo-tiktok"></ion-icon></a>
-                <a href="#"><ion-icon class="i" name="logo-linkedin"></ion-icon></a>
-              </div>
+      <!-- <p class="description">यो भिडियोमा पहिलो फुटबल खेलको रोमाञ्चक क्षणहरू देखाइएको छ।</p> -->
+      <br><br>
+
+      <div class="video-card-small">
+        <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="sm-vid-info">
+          <span class="small-date date">२०८० फागुन ०३</span>
+          <span class="small-desc">
+            फुटबल प्रतियोगिताका रोमान्चक खेलहरु
+          </span>
+        </div>
+      </div>
+      <br><br>
+      <div class="video-card-small">
+        <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="sm-vid-info">
+          <span class="small-date date">२०८० फागुन ०३</span>
+          <span class="small-desc">
+            फुटबल प्रतियोगिताका रोमान्चक खेलहरु
+          </span>
+        </div>
+      </div>
+      <br><br>
+      <div class="video-card-small">
+        <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="sm-vid-info">
+          <span class="small-date date">२०८० फागुन ०३</span>
+          <span class="small-desc">
+            फुटबल प्रतियोगिताका रोमान्चक खेलहरु
+          </span>
+        </div>
+      </div>
+      <br><br>
+      <div class="video-card-small">
+
+        <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="sm-vid-info">
+          <span class="small-date date">२०८० फागुन ०३</span>
+          <span class="small-desc">
+            फुटबल प्रतियोगिताका रोमान्चक खेलहरु
+          </span>
+        </div>
+      </div>
+      <br><br>
+      <div class="video-card-small">
+        <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="sm-vid-info">
+          <span class="small-date date">२०८० फागुन ०३</span>
+          <span class="small-desc">
+            फुटबल प्रतियोगिताका रोमान्चक खेलहरु
+          </span>
+        </div>
+      </div>
+      <br><br>
+      <div class="video-card-small">
+        <iframe class="small-video" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="sm-vid-info">
+          <span class="small-date date">२०८० फागुन ०३</span>
+          <span class="small-desc">
+            फुटबल प्रतियोगिताका रोमान्चक खेलहरु
+          </span>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </section>
+  <section>
+    <footer class="footer">
+      <div class="link">
+        <div class="row">
+          <div class="col">
+            <h1>Contactus</h1>
+            <div class="contactus">
+              <ion-icon class="icon-con" name="location-outline"></ion-icon>
+              <p><br>Hetauda ,Nepal </p>
             </div>
-            <div class="col">
-              <h1 class="kiki"> Quicks Links</h1>
-              <div class="quicks">
-                <a href="about.html"> गृहपृष्ठ </a> <br>
-                <a href="#">टिमहरू</a><br>
-                <a href="#">तालिका</a><br>
-                <a href="#">खेलकुद क्लब</a><br>
-                <a href="#">Previous Matches</a><br>
-                <a href="#">hilight</a><br>
-                <a href="#">सातौं बाग्मती गोल्डकप – २०८१</a><br>
-              </div>
+            <div class="contactus">
+              <ion-icon class="icon-con" name="mail-outline"></ion-icon>
+              <p><br>bagmatigoldcup@gmail.com</p>
             </div>
-            <div class="col">
-              <h1> Quicks Links</h1>
-              <div class="quicks">
-                <a href="about.html"> प्रत्यक्ष स्कोर हेर्नुहोस् </a> <br>
-                <a href="#">तालिका हेर्नुहोस्</a><br>
-                <a href="#">टिम जानकारी</a><br>
-                <a href="#">स्पोन्सरहरू</a><br>
-                <a href="#">स्कोर</a><br>
-                <a href="#photo"> तस्बिरहरु</a><br>
-                <a href="#">news</a><br>
-              </div>
+            <div class="contactus">
+              <ion-icon class="icon-con" name="call-outline"></ion-icon>
+              <p><br>000000000</p>
+            </div>
+            <br>
+            <h1>FOLLOW US </h1>
+            <div class="social1">
+              <a href="#"><ion-icon class="i" name="logo-facebook"></ion-icon></a>
+              <a href="#"><ion-icon class="i" name="logo-instagram"></ion-icon></a>
+              <a href="#"><ion-icon class="i" name="logo-youtube"></ion-icon></a>
+              <a href="#"><ion-icon class="i" name="logo-tiktok"></ion-icon></a>
+              <a href="#"><ion-icon class="i" name="logo-linkedin"></ion-icon></a>
             </div>
           </div>
-
+          <div class="col">
+            <h1 class="kiki"> Quicks Links</h1>
+            <div class="quicks">
+              <a href="./Pages/aboutus.html"> गृहपृष्ठ </a> <br>
+              <a href="#">टिमहरू</a><br>
+              <a href="#">तालिका</a><br>
+              <a href="#">खेलकुद क्लब</a><br>
+              <a href="#">Previous Matches</a><br>
+              <a href="#">hilight</a><br>
+              <a href="#">सातौं बाग्मती गोल्डकप – २०८१</a><br>
+            </div>
+          </div>
+          <div class="col">
+            <h1> Quicks Links</h1>
+            <div class="quicks">
+              <a href="./Pages/aboutus.html"> प्रत्यक्ष स्कोर हेर्नुहोस् </a> <br>
+              <a href="#">तालिका हेर्नुहोस्</a><br>
+              <a href="#">टिम जानकारी</a><br>
+              <a href="#">स्पोन्सरहरू</a><br>
+              <a href="#">स्कोर</a><br>
+              <a href="#photo"> तस्बिरहरु</a><br>
+              <a href="#">news</a><br>
+            </div>
+          </div>
         </div>
-        <div class="copyright">
-          <p> Copyright © 2025 बाग्मती &nbsp;</p>
-          <p> Made with 🤍 by <a href="https://www.linkedin.com/in/rejan-dhungana-a4336a299/"> Next-Step Tech</a></p>
-          </di>
-      </footer>
-    </section>
-    <script>
-      function viewLiveScore() {
-        alert('प्रत्यक्ष स्कोर हेर्नुहोस्');
-      }
-    </script>
+
+      </div>
+      <div class="copyright">
+        <p> Copyright © 2025 बाग्मती &nbsp;</p>
+        <p> Made with 🤍 by <a href="https://www.linkedin.com/in/rejan-dhungana-a4336a299/"> Next-Step InfoTech</a></p>
+        </di>
+    </footer>
+  </section>
+  <script>
+    function viewLiveScore() {
+      alert('प्रत्यक्ष स्कोर हेर्नुहोस्');
+    }
+  </script>
 </body>
 
 </html>

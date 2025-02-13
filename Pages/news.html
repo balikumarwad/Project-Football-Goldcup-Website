@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <title>news</title>
 </head>
 <style>
@@ -25,20 +25,22 @@
   .newspage-main-card {
     display: flex;
     flex-direction: row;
+    padding: 5px;
     gap: 15px;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 
 .image-container {
-    overflow: hidden;
+    /* overflow: hidden; */
     width: auto;
     height: auto;
 }
 
 .newspage-main-img {
-  height: 150px;
+  /* height: 109px; */
   width: 183px;
-    object-fit: cover;
+    /* object-fit: cover; */
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
@@ -56,7 +58,9 @@
     font-size: 1rem;
     text-decoration: none;
     color: #333;
+    text-align:justify;
     line-height: 1.4;
+    width: auto;
 }
 
 .news-subtitle {
@@ -68,6 +72,18 @@
     color: #888;
     font-size: 0.85rem;
 }
+
+
+.newspage-main-card:hover  .newspage-main-img{
+  transform: scale(1.1);
+}
+.newspage-main-card:hover  .news-link {
+ text-decoration: underline;
+ color: #3752c5;
+}
+
+
+
 </style>
 <body>
 
@@ -87,8 +103,9 @@
         <div class="newspage-main-container">
           <div class="newspage-main-card">
             <div class="image-container">
-            <img class="newspage-main-img" src="./Assets/images/newsphoto.jpg">
+            <img class="newspage-main-img" src="../Assets/images/newsphoto.jpg">
             </div>
+            <div class="flex-column">
             <div class="newspage-date">
                 <p>२०८० फागुन २</p>
             </div>
@@ -96,21 +113,25 @@
               <a href="#" class="news-link">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</a>
               <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
             </div>
+            </div>
           </div>
             
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/pab.jpg">
+            <img class="newspage-main-img" src="../Assets/images/pab.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
               <p>२०८० माघ  १२</p>
             </div>
             <div class="about-newspage">
             <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
+            </div>
             </div>
           </div>
           
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/s.jpg">
+            <img class="newspage-main-img" src="../Assets/images/s.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
               <p>२०८१ माघ ८</p>
             </div>
@@ -118,9 +139,12 @@
             <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
             </div>
+            </div>
           </div>
+
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/newsphoto.jpg">
+            <img class="newspage-main-img" src="../Assets/images/newsphoto.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
                 <p>२०८० फागुन २</p>
             </div>
@@ -128,10 +152,12 @@
             <a href="#" class="news-link">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
             </div>
+            </div>
           </div>
             
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/pab.jpg">
+            <img class="newspage-main-img" src="../Assets/images/pab.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
               <p>२०८० माघ  १२</p>
             </div>
@@ -139,10 +165,12 @@
             <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
             </div>
+            </div>
           </div>
 
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/s.jpg">
+            <img class="newspage-main-img" src="../Assets/images/s.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
               <p>२०८१ माघ ८</p>
             </div>
@@ -150,9 +178,12 @@
             <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
             </div>
+            </div>
           </div>
+
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/newsphoto.jpg">
+            <img class="newspage-main-img" src="../Assets/images/newsphoto.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
                 <p>२०८० फागुन २</p>
             </div>
@@ -160,10 +191,12 @@
             <a href="#" class="news-link">छैठौं बागमती गोल्डकप राष्ट्रिय फुटबल प्रतियोगिताका क्रममा कैद गरिएको तस्बिर</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
             </div>
+            </div>
           </div>
             
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/pab.jpg">
+            <img class="newspage-main-img" src="../Assets/images/pab.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
               <p>२०८० माघ  १२</p>
             </div>
@@ -171,16 +204,19 @@
             <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै जिल्ला समन्वय प्रमुख ललित घलान ज्यु</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
             </div>
+            </div>
           </div>
 
           <div class="newspage-main-card">
-            <img class="newspage-main-img" src="./Assets/images/s.jpg">
+            <img class="newspage-main-img" src="../Assets/images/s.jpg">
+            <div class="flex-column">
             <div class="newspage-date">
               <p>२०८१ माघ ८</p>
             </div>
             <div class="about-newspage">
             <a href="#" class="news-link">म्यान अफ दि म्याच पुरस्कार वितरण गर्नुहुदै बागमती गाउपालिका अध्यक्ष सर्केश घलान ज्यु</a>
             <p class="news-subtitle">सोमबार फाइनल प्रवेशका लागि सङ्कटा र मच्छिन्द्र आमने सामने हुने छन् </p>
+            </div>
             </div>
           </div>
 
